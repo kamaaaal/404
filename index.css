@@ -1,0 +1,130 @@
+@font-face{
+    font-family: Inconsolata;
+    src : url('./assets/inconsolata.regular.ttf')
+}
+@font-face{
+    font-family: Inconsolata-bold;
+    src : url('./assets/inconsolata.bold.ttf')
+}
+@font-face{
+    font-family: spacemono-bold;
+    src : url('./assets/SpaceMono-Bold.ttf')
+}
+@font-face{
+    font-family: spacemono;
+    src : url('./assets/SpaceMono-Regular.ttf')
+}
+
+:root{
+    --header-font-size : 1.4rem;
+    --font-color-grey : #333333
+}
+*{
+    margin : 0px;
+}
+
+body{
+    font-family: spacemono;
+    background-color: hotpink;
+    color : var(--font-color-grey);
+
+}
+
+header{
+    position : relative;
+    height : 5rem;
+    padding : 3rem;
+    margin-bottom: 5rem;
+}
+header h1{
+    font-size: var(--header-font-size);
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    font-family: Inconsolata;
+    letter-spacing: -0.1rem;
+}
+
+.content {
+    display : grid;
+    max-width: 99vw;
+    padding-left : 5rem;
+    padding-right : 3rem;
+    grid-template-areas: 
+        'img head'
+        'img paragraph'
+        'img button'
+    ;
+    column-gap: 5rem;
+    row-gap: 3.5rem;
+    align-content:center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content img {
+    grid-area : img;
+    width : 539.22px;
+    height: 447.43px;
+}
+
+.content h1{
+    grid-area : head;
+    font-family:spacemono-bold;
+    font-size: 4rem;
+}
+
+.content p {
+    grid-area : paragraph;
+    width : 25rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.content .button {
+    grid-area : button;
+    max-width : fit-content;
+    border : none;
+    font-family: spacemono;
+    color : #FFFFFF;
+    background-color:  #333333;
+    font-size : 1rem;
+    padding : 1.5rem 2rem 1.5rem 2rem;
+
+}
+
+
+
+address h4{
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Inconsolata;
+    font-style: normal;
+   color : #bbbfb6;
+   padding-bottom: .5rem;
+}
+address h4 a{
+    color : inherit;
+    text-decoration: none;
+}
+
+
+@media (max-width : 480px){
+   .content{
+        grid-template-areas: 
+            'img'
+            'head'
+            'paragraph'
+            'button'
+        ;
+        margin-left : 2rem;
+        
+   }
+   .content img{
+       width: 286.83px;
+       height: 238px;
+       justify-self: center;
+   }
+   .content h1{
+       font-size : 2.5rem;
+   }
+}
