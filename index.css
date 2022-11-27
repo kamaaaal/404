@@ -25,7 +25,7 @@
 
 body{
     font-family: spacemono;
-    background-color: hotpink;
+    /* background-color: hotpink; */
     color : var(--font-color-grey);
 
 }
@@ -116,7 +116,7 @@ address h4 a{
             'paragraph'
             'button'
         ;
-        margin-left : 2rem;
+        /* margin-left : 2rem; */
         
    }
    .content img{
